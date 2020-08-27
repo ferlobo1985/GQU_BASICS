@@ -6,7 +6,7 @@ import axios from 'axios';
 const server = new GraphQLServer({
     typeDefs:`
         type Query {
-            agent: User!
+            agent(id:ID!): User!
             agents: [User!]!
         }
 
@@ -20,15 +20,14 @@ const server = new GraphQLServer({
     `,
     resolvers:{
         Query:{
-            agent:async()=>{
-                const response = await axios.get('http://localhost:3004/users/1');
+            agent:async(parent,args,context,info)=>{
+                const response = await axios.get(`http://localhost:3004/users/${args.id}`);
                 return response.data
             },
             agents:async()=>{
                 const response = await axios.get('http://localhost:3004/users');
                 return response.data
-            }   
-
+            }
         }
     }
 });
