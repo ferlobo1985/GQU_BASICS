@@ -1,5 +1,5 @@
 import { GraphQLServer } from 'graphql-yoga';
-
+import axios from 'axios';
 // Scalar types
 // object types
 
@@ -20,33 +20,14 @@ const server = new GraphQLServer({
     `,
     resolvers:{
         Query:{
-            agent(){
-                return {
-                    id: 1,
-                    name:'Steve',
-                    age: null,
-                    married: true,
-                    average: 4.5,
-                }
+            agent:async()=>{
+                const response = await axios.get('http://localhost:3004/users/1');
+                return response.data
             },
-            agents(){
-                return [
-                    {
-                        id: 1,
-                        name:'Steve',
-                        age: null,
-                        married: true,
-                        average: 4.5,
-                    },
-                    {
-                        id: 1,
-                        name:'Francis',
-                        age: null,
-                        married: true,
-                        average: 4.5,
-                    }
-                ]
-            }
+            agents:async()=>{
+                const response = await axios.get('http://localhost:3004/users');
+                return response.data
+            }   
 
         }
     }
