@@ -24,6 +24,25 @@ const Query = {
     pictures: async(parent,args,context,info)=>{
         const response = await axios.get(`${db}/pictures`);
         return response.data
+    },
+    getAnimal:async(parent,args,context,info)=>{
+        let response;
+        let random = Math.floor(Math.random()*6)+1;
+
+        if(random > 3){
+            response = {
+                animal:'DOG',
+                name:'Captain',
+                hair:'lots'
+            }
+        } else{
+            response = {
+                animal:'CAT',
+                name:'Fluffy',
+                paws:'sharp'
+            }
+        }
+        return response;
     }
 }
 
@@ -118,10 +137,24 @@ const Picture = {
     }
 }
 
+const AnimalUnion = {
+    __resolveType(obj,context,info){
+        if(obj.animal == 'DOG'){
+            return 'Dog';
+        }
+        if(obj.animal == 'CAT'){
+            return 'Cat';
+        }
+        return null
+    }
+}
+
+
 export {
     Query,
     Mutation,
     Post,
     User,
-    Picture
+    Picture,
+    AnimalUnion
 }

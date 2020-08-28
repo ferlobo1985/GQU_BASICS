@@ -1,9 +1,24 @@
+union AnimalUnion = Dog | Cat
+
+type Dog {
+    animal:String
+    name:String!
+    hair:String!
+}
+
+type Cat {
+    animal:String
+    name:String!
+    paws:String!
+}
+
 type Query {
-  agent(id: ID!): User!
-  agents(name: String, age: Int): [User!]!
-  posts: [Post!]!
-  post(id: ID!): Post!
-  pictures: [Picture!]!
+    agent(id: ID!): User!
+    agents(name: String, age: Int): [User!]!
+    posts: [Post!]!
+    post(id: ID!): Post!
+    pictures: [Picture!]!
+    getAnimal: AnimalUnion!
 }
 
 type Mutation {
