@@ -6,7 +6,7 @@
       "age": 23,
       "married": true,
       "average": 4.5,
-      "status": "active"
+      "status": "not_active"
     },
     {
       "id": 2,
@@ -31,13 +31,6 @@
       "married": true,
       "average": 2.5,
       "status": "guest"
-    },
-    {
-      "name": "Marlon",
-      "age": 30,
-      "married": true,
-      "average": 0,
-      "id": 5
     }
   ],
   "posts": [
@@ -103,6 +96,56 @@
       "author": 1,
       "picture": 2,
       "id": 9
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 10
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 11
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 12
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 13
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 14
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 15
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "status": "DRAFT",
+      "id": 16
     }
   ],
   "pictures": [
