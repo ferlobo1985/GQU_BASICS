@@ -11,6 +11,7 @@ type Mutation {
     createPost(title:String,content:String!):Post!
     deletePost(id:ID!):Boolean!
     deleteAgent(id:ID!):Boolean!
+    updateAgent(id:ID!,name:String,age:Int,married:Boolean,average:Float):User!
 }
 
 type Picture {

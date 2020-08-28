@@ -65,6 +65,16 @@ const Mutation = {
             return true
         }
         return false
+    },
+    updateAgent: async(parent,args,context,info)=>{
+        let data = {}
+        if(args.name !== undefined) { data.name = args.name }
+        if(args.age !== undefined) { data.age = args.age }
+        if(args.married !== undefined) { data.married = args.married }
+        if(args.average !== undefined) { data.average = args.average }
+
+        const response = await axios.patch(`${db}/users/${args.id}`,data);
+        return response.data;
     }
 }
 
