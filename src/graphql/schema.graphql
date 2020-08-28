@@ -6,6 +6,11 @@ type Query {
   pictures: [Picture!]!
 }
 
+type Mutation {
+    createAgent(name:String!,age:Int!,married:Boolean): User!
+    createPost(title:String,content:String!):Post!
+}
+
 type Picture {
   id: ID!
   path: String!

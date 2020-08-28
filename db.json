@@ -96,6 +96,13 @@
       "author": 1,
       "picture": 2,
       "id": 9
+    },
+    {
+      "title": "Awesome post",
+      "content": "Some super awesome content",
+      "author": 1,
+      "picture": 1,
+      "id": 10
     }
   ],
   "pictures": [
