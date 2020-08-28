@@ -40,7 +40,6 @@ const Mutation = {
     createPost:async(parent,args,context,info)=>{
         /// get token = user id
         // got to store picture === get id of the picture
-
         const response = await axios.post(`${db}/posts`,{
             title: args.title,
             content:args.content,
@@ -48,6 +47,13 @@ const Mutation = {
             picture:1
         });
         return response.data;
+    },
+    deletePost:async(parent,args,context,info)=>{
+        const response = await axios.delete(`${db}/posts/${args.id}`);
+        if(Object.keys(response.data).length === 0 ){
+            return true
+        }
+        return false
     }
 }
 

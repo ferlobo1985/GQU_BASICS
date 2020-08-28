@@ -9,6 +9,7 @@ type Query {
 type Mutation {
     createAgent(name:String!,age:Int!,married:Boolean): User!
     createPost(title:String,content:String!):Post!
+    deletePost(id:ID!):Boolean!
 }
 
 type Picture {
