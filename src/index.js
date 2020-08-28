@@ -1,5 +1,5 @@
 import { GraphQLServer } from 'graphql-yoga';
-import { Query,Mutation,User,Post,Picture,AnimalUnion } from './graphql/resolvers/index';
+import { Query,Mutation,User,Post,Picture,AnimalInterface } from './graphql/resolvers/index';
 
 
 const server = new GraphQLServer({
@@ -10,7 +10,7 @@ const server = new GraphQLServer({
         User,
         Post,
         Picture,
-        AnimalUnion
+        AnimalInterface
     }
 });
 

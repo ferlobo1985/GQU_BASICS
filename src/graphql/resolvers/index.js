@@ -137,7 +137,7 @@ const Picture = {
     }
 }
 
-const AnimalUnion = {
+const AnimalInterface = {
     __resolveType(obj,context,info){
         if(obj.animal == 'DOG'){
             return 'Dog';
@@ -156,5 +156,5 @@ export {
     Post,
     User,
     Picture,
-    AnimalUnion
+    AnimalInterface
 }

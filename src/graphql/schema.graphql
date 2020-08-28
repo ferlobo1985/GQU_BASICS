@@ -1,12 +1,17 @@
-union AnimalUnion = Dog | Cat
+# union AnimalUnion = Dog | Cat
 
-type Dog {
+interface AnimalInterface {
+    animal:String
+    name:String!
+}
+
+type Dog implements AnimalInterface{
     animal:String
     name:String!
     hair:String!
 }
 
-type Cat {
+type Cat implements AnimalInterface{
     animal:String
     name:String!
     paws:String!
@@ -18,7 +23,7 @@ type Query {
     posts: [Post!]!
     post(id: ID!): Post!
     pictures: [Picture!]!
-    getAnimal: AnimalUnion!
+    getAnimal: AnimalInterface!
 }
 
 type Mutation {
