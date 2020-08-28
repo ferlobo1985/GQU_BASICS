@@ -2,7 +2,7 @@
   "users": [
     {
       "id": 1,
-      "name": "Martin",
+      "name": "Leena",
       "age": 23,
       "married": true,
       "average": 4.5,
@@ -31,6 +31,13 @@
       "married": true,
       "average": 2.5,
       "status": "guest"
+    },
+    {
+      "name": "Marlon",
+      "age": 30,
+      "married": true,
+      "average": 0,
+      "id": 5
     }
   ],
   "posts": [
